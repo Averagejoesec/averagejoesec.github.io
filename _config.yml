@@ -1,6 +1,3 @@
-title: Averagejoesec
-author: Joseph Gonzalez
-email: averagejoesec@github.com
+title: My Portfolio
 description: A portfolio showcasing Cybersecurity, Cloud Security, and DevSecOps projects.
-baseurl: "https://github.com/Averagejoesec/averagejoesec.github.io"
-url: "https://averagejoesec.github.io"
+theme: jekyll-theme-minimal

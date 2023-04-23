@@ -1,0 +1,11 @@
+- title: Project 1
+  image: /assets/images/project1.jpg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- title: Project 2
+  image: /assets/images/project2.jpg
+  description: Duis eget ligula euismod, aliquet odio ut, lacinia justo.
+
+- title: Project 3
+  image: /assets/images/project3.jpg
+  description: In hac habitasse platea dictumst. Suspendisse potenti.
