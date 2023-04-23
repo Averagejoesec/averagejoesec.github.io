@@ -1,5 +1,8 @@
 ---
-layout: walkthrough
+layout: project
+title: Project 1
+image: /assets/images/project1.jpg
+description: A brief description of Project 1.
 ---
 
 # Project Title
