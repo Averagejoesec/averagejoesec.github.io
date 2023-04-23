@@ -7,6 +7,8 @@ description: A brief description of Project 2.
 
 # Project Title
 
+Project 2
+
 ## Project Description
 
 Add your project description here.

@@ -6,6 +6,7 @@ description: A brief description of Project 1.
 ---
 
 # Project Title
+Project 1
 
 ## Project Description
 
