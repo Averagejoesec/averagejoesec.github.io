@@ -1,8 +1,6 @@
 ---
-layout: walkthrough
+layout: default
 title: Project 1
-image: /assets/project1.jpg
-description: A brief description of Project 1.
 ---
 
 # Project 1: Flask News Aggregator with Docker

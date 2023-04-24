@@ -2,4 +2,4 @@ title: My Portfolio
 description: A portfolio showcasing Cybersecurity, Cloud Security, and DevSecOps projects.
 theme: jekyll-theme-minimal
 url: "https://averagejoesec.github.io"
-baseurl: "/averagejoesec.github.io"
+baseurl: ""
