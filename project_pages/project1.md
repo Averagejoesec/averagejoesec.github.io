@@ -134,8 +134,8 @@ In this step, we will containerize the Flask application using Docker. Docker al
 
 ### 2.1 Install Docker
 
-- For Windows and macOS, download Docker Desktop from the [official Docker website](https://www.docker.com/products/docker-desktop).
-- For Linux, follow the [official installation guide](https://docs.docker.com/engine/install/) for your specific distribution.
+For Windows and macOS, download Docker Desktop from the [official Docker website](https://www.docker.com/products/docker-desktop).
+For Linux, follow the [official installation guide](https://docs.docker.com/engine/install/) for your specific distribution.
 
 ### 2.2 Create a `Dockerfile` in the same folder as your Flask application
 
@@ -169,16 +169,6 @@ ENV FLASK_RUN_HOST=0.0.0.0
 # Start the Flask app
 CMD ["flask", "run"]
 ```
-
-This `Dockerfile` does the following:
-
-- Specifies the base image as `python:3.9-slim`.
-- Sets the working directory to `/app`.
-- Copies the `requirements.txt` file into the container and installs the dependencies.
-- Copies the rest of the application code into the container.
-- Exposes port 5000, which is the default port for Flask applications.
-- Sets environment variables required for Flask.
-- Starts the Flask application using the `flask run` command.
 
 ### 2.3 Create a `requirements.txt` file
 
