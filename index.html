@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
 </head>
 
 <body>
@@ -17,15 +17,15 @@
     <ul>
       <li>
         <a href="{{ '/_project_pages/project1.html' | relative_url }}">
-          <img src="{{ '/assets/images/project1.jpg' | relative_url }}" alt="Project 1 Image">
+          <img src="{{ site.baseurl }}/assets/images/project1.jpg" alt="Project 1 Image">
          <p>Project 1</p>
         </a>
         <p>Create a news aggregator app with python and docker.</p>
       </li>
       <li>
         <a href="{{ '/_project_pages/project2.html' | relative_url }}">
-          <img src="{{ '/assets/images/project2.png' | relative_url }}" alt="Project 2 Image">
-          Project 2
+          <img src="{{ site.baseurl }}/assets/images/project2.png" alt="Project 2 Image">>
+         <p>Project 2</p>
         </a>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </li>
