@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Here, you'll find my Cybersecurity projects and walkthroughs.</p>
+
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <a href="{{ '/_project_pages/project1.html' | relative_url }}">
+          <img src="{{ site.baseurl }}/assets/images/project1.jpg" alt="Project 1 Image">
+         <p>Project 1</p>
+        </a>
+        <p>Create a news aggregator app with python and docker.</p>
+      </li>
+      <li>
+        <a href="{{ '/_project_pages/project2.html' | relative_url }}">
+          <img src="{{ site.baseurl }}/assets/images/project2.png" alt="Project 2 Image">>
+         <p>Project 2</p>
+        </a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </li>
+      <!-- Add more project links as needed -->
+    </ul>
+
+    <h2>PowerShell Scripts</h2>
+    <ul>
+      <li><a href="{{ '/_powershell_scripts/script1.html' | relative_url }}">Script 1</a></li>
+      <li><a href="{{ '/_powershell_scripts/script2.html' | relative_url }}">Script 2</a></li>
+      <!-- Add more PowerShell script links as needed -->
+    </ul>
+  </div>
+</body>
+
+</html>
+
