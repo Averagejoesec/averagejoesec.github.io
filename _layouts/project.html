@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 2</title>
+  <title>{{ page.title }}</title>
   <link rel="stylesheet" href="/assets/css/styles.css">
    <style>
     /* Project-specific styles */
@@ -32,28 +32,8 @@
 
 <body>
   <div class="container project-container">
-    <h1>Project 2</h1>
-    <h1 id="project-title">Project Title</h1>
-
-<p>Project 2</p>
-
-<h2 id="project-description">Project Description</h2>
-
-<p>Add your project description here.</p>
-
-<h2 id="technologies-used">Technologies Used</h2>
-
-<ul>
-  <li>Technology 1</li>
-  <li>Technology 2
-…</li>
-</ul>
-
-<h2 id="project-walkthrough">Project Walkthrough</h2>
-
-<p>Provide a step-by-step guide for your project.</p>
-
-
+    <h1>{{ page.title }}</h1>
+    {{ content }}
   </div>
 </body>
 
