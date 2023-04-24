@@ -155,10 +155,8 @@
 
 <h3 id="21-install-docker">2.1 Install Docker</h3>
 
-<ul>
-  <li>For Windows and macOS, download Docker Desktop from the <a href="https://www.docker.com/products/docker-desktop">official Docker website</a>.</li>
-  <li>For Linux, follow the <a href="https://docs.docker.com/engine/install/">official installation guide</a> for your specific distribution.</li>
-</ul>
+<p>For Windows and macOS, download Docker Desktop from the <a href="https://www.docker.com/products/docker-desktop">official Docker website</a>.
+For Linux, follow the <a href="https://docs.docker.com/engine/install/">official installation guide</a> for your specific distribution.</p>
 
 <h3 id="22-create-a-dockerfile-in-the-same-folder-as-your-flask-application">2.2 Create a <code class="language-plaintext highlighter-rouge">Dockerfile</code> in the same folder as your Flask application</h3>
 
@@ -191,18 +189,6 @@
 <span class="c"># Start the Flask app</span>
 <span class="k">CMD</span><span class="s"> ["flask", "run"]</span>
 </code></pre></div></div>
-
-<p>This <code class="language-plaintext highlighter-rouge">Dockerfile</code> does the following:</p>
-
-<ul>
-  <li>Specifies the base image as <code class="language-plaintext highlighter-rouge">python:3.9-slim</code>.</li>
-  <li>Sets the working directory to <code class="language-plaintext highlighter-rouge">/app</code>.</li>
-  <li>Copies the <code class="language-plaintext highlighter-rouge">requirements.txt</code> file into the container and installs the dependencies.</li>
-  <li>Copies the rest of the application code into the container.</li>
-  <li>Exposes port 5000, which is the default port for Flask applications.</li>
-  <li>Sets environment variables required for Flask.</li>
-  <li>Starts the Flask application using the <code class="language-plaintext highlighter-rouge">flask run</code> command.</li>
-</ul>
 
 <h3 id="23-create-a-requirementstxt-file">2.3 Create a <code class="language-plaintext highlighter-rouge">requirements.txt</code> file</h3>
 
