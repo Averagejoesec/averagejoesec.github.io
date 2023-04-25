@@ -109,7 +109,7 @@ Create a folder named `templates` and inside it, create a new file called `index
     </style>
 </head>
 <body>
-    <div class
+    <div class>
     <div class="container">
         <h1>News Aggregator</h1>
         {% for article in articles %}

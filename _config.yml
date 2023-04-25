@@ -3,6 +3,10 @@ description: A portfolio showcasing Cybersecurity, Cloud Security, and DevSecOps
 theme: jekyll-theme-minimal
 url: "https://averagejoesec.github.io"
 baseurl: ""
-markdown: kramdown
+highlighter: rouge
 kramdown:
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+rouge_theme: base16.solarized.dark
+
