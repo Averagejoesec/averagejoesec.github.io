@@ -1,11 +1,13 @@
 ---
 layout: project
-title: Project 1 - Flask News Aggregator with Docker
+title: Project 1
 ---
 
-## Step 1: Create a sample application
+# Flask News Aggregator with Docker
 
-Let's start by creating a simple Flask application to search for news articles using the Bing Search API. We'll fetch the top 10 most recent articles for the specified keywords and display them in an aesthetically pleasing format.
+## Step 1: Create the application with Python
+
+Let's start by creating a Flask application to search for news articles using the Bing Search API. We'll fetch the top 10 most recent articles for the specified keywords and display them in order from most to least recent.
 
 ### 1.1 Sign up for the Bing Web Search API
 
