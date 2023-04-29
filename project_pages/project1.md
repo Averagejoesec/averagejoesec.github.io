@@ -208,5 +208,6 @@ Now, you should be able to access the Flask application at `http://localhost:500
 
 To stop the Docker container, press `Ctrl+C` in the terminal or command prompt where the container is running.
 
-You have now successfully containerized your Flask application using Docker. This makes it easier to deploy the application in different environments and ensures consistent behavior across platforms.
+### You have now successfully containerized your Flask application using Docker. 
+### [Next, lets setup AWS and upload your Docker image.](project_pages/project2.md)
 
