@@ -16,9 +16,12 @@ We will use Amazon S3 to store the application code and Docker images. To create
 Sign in to the AWS Management Console and open the [Amazon S3 console](https://console.aws.amazon.com/s3/).
 Click "Create bucket".
 Enter a unique name for your bucket, choose a region, accept all other defaults, and click "Create bucket".
-![Create bucket](assets/images/create-bucket.png)	
+
+![Create bucket](/assets/images/create-bucket.png)	
+
 Upload your Flask application code (including the 'index.html' template) to the newly created bucket.
-![Upload code](assets/images/upload.png)
+
+![Upload code](/assets/images/upload.png)
 
 ### 1.3 Set up IAM roles and policies:
 Create an IAM role and attach policies to it that grant the necessary permissions for your AWS services.
@@ -26,7 +29,9 @@ Create an IAM role and attach policies to it that grant the necessary permission
 Open the [IAM console](https://console.aws.amazon.com/iam/).
 In the navigation pane, click "Roles" and then "Create role".
 Click the drop down for ‘Use case’ and choose EKS.
-![Create role](assets/images/select-eks.png)
+
+![Create role](/assets/images/select-eks.png)
+
 Accept all defaults and hit ‘Create role’
 
 
@@ -35,7 +40,9 @@ A VPC is necessary to run your Amazon EKS cluster. You can either use the defaul
 
 Open the [VPC console](https://console.aws.amazon.com/vpc/).
 Click "Create VPC" , select ‘VPC only’, enter a Name tag, CIDR block, and accept all other defaults.
-![Create VPC](assets/images/create-vpc.png)
+
+![Create VPC](/assets/images/create-vpc.png)
+
 Click "Create VPC".
 
 ### 1.5 Set up AWS CLI:
@@ -50,7 +57,8 @@ We will use the Docker image created in the previous project for your Kubernetes
 
 Create an ECR repository in the AWS Management Console: 
 Open the [ECR console](https://console.aws.amazon.com/ecr/), click "Get Started", enter a name for your repository, accept all defaults, and click "Create repository".
-![Create repository](assets/images/create-repository.png)
+
+![Create repository](/assets/images/create-repository.png)
 
 ### 2.2 Authenticate your Docker client to the Amazon ECR registry.
 
@@ -92,9 +100,9 @@ Push your Docker image to the ECR repository. Use the same values for `<aws_acco
 
    ```
 
-![ECR Repository](assets/images/image-in-ecr.png)
+![ECR Repository](/assets/images/image-in-ecr.png)
 
 ### You have now successfully pushed your Docker image to your AWS ECR repository.
 
-### [Next, lets setup your Kubernetes cluster and deploy your Docker image.](project_pages/project3.md).
+### [Next, lets setup your Kubernetes cluster and deploy your Docker image.](project_pages/project3.md)
 
