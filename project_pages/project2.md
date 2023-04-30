@@ -90,14 +90,12 @@ Replace `<aws_account_id>`, `<region>`, and ‘<repository-name>’ with your AW
 
    ```
    docker tag flask-news-aggregator:latest <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository-name>:latest
-
    ```
 
 Push your Docker image to the ECR repository. Use the same values for `<aws_account_id>`, `<region>`, and ‘<repository-name>’ as before:
 
    ```
    docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository-name>:latest
-
    ```
 
 ![ECR Repository](/assets/images/image-in-ecr.png)
