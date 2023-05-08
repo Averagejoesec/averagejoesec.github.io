@@ -109,6 +109,8 @@ In your GitHub repository, go to "Settings" > "Secrets" > "Actions" and add the 
 - `ECR_REPOSITORY`: Your Amazon ECR repository name.
 - `KUBECONFIG`: Your Kubernetes kubeconfig file content, base64-encoded.
 
+![Secrets page](assets/images/secrets-page.png)
+
 To encode your kubeconfig file, run the following command:
 
 ```bash
