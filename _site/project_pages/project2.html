@@ -115,13 +115,11 @@ Replace <code class="language-plaintext highlighter-rouge">&lt;aws_account_id&gt
 <p>Replace <code class="language-plaintext highlighter-rouge">&lt;aws_account_id&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;region&gt;</code>, and ‘<repository-name>’ with your AWS account ID and the region where your ECR repository is located and name:</repository-name></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   docker tag flask-news-aggregator:latest &lt;aws_account_id&gt;.dkr.ecr.&lt;region&gt;.amazonaws.com/&lt;repository-name&gt;:latest
-
 </code></pre></div></div>
 
 <p>Push your Docker image to the ECR repository. Use the same values for <code class="language-plaintext highlighter-rouge">&lt;aws_account_id&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;region&gt;</code>, and ‘<repository-name>’ as before:</repository-name></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   docker push &lt;aws_account_id&gt;.dkr.ecr.&lt;region&gt;.amazonaws.com/&lt;repository-name&gt;:latest
-
 </code></pre></div></div>
 
 <p><img src="/assets/images/image-in-ecr.png" alt="ECR Repository" /></p>
