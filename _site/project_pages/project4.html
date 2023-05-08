@@ -129,6 +129,8 @@ git push origin main
 
 <p>In your GitHub repository, go to “Settings” &gt; “Secrets” &gt; “Actions” and add the following secrets:</p>
 
+<p><img src="/assets/images/secrets-page.png" alt="Secrets page" /></p>
+
 <ul>
   <li><code class="language-plaintext highlighter-rouge">AWS_ACCESS_KEY_ID</code>: Your AWS access key ID.</li>
   <li><code class="language-plaintext highlighter-rouge">AWS_SECRET_ACCESS_KEY</code>: Your AWS secret access key.</li>
@@ -136,8 +138,6 @@ git push origin main
   <li><code class="language-plaintext highlighter-rouge">ECR_REPOSITORY</code>: Your Amazon ECR repository name.</li>
   <li><code class="language-plaintext highlighter-rouge">KUBECONFIG</code>: Your Kubernetes kubeconfig file content, base64-encoded.</li>
 </ul>
-
-<p><img src="/assets/images/secrets-page.png" alt="Secrets page" /></p>
 
 <p>To encode your kubeconfig file, run the following command:</p>
 
