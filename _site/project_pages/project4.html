@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 4</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+   <style>
+    /* Project-specific styles */
+    .project-container {
+      text-align: left;
+    }
+
+    pre {
+      background-color: #333;
+      color: #f1f1f1;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #333;
+      color: #f1f1f1;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container project-container">
+    <h1>Project 4</h1>
+    <h1 id="implement-cicd-using-github-actions">Implement CI/CD using GitHub Actions</h1>
+
+<h2 id="51-create-a-github-repository">5.1. Create a GitHub repository:</h2>
+
+<p>Create a GitHub repository and push your Flask application code (including the Dockerfile, requirements.txt, Kubernetes manifests, and any other necessary files) to the repository.</p>
+
+<h2 id="52-clone-the-github-repository">5.2 Clone the GitHub repository:</h2>
+
+<p>Navigate to the directory where you want to store the project and clone the GitHub repository:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /path/to/your/directory
+git clone https://github.com/averagejoesec/news-aggregator-app.git
+</code></pre></div></div>
+
+<h2 id="53-add-flask-application-code">5.3 Add Flask application code:</h2>
+
+<p>Copy your Flask application code (including the Dockerfile, requirements.txt, Kubernetes manifests, and any other necessary files) into the <code class="language-plaintext highlighter-rouge">news-aggregator-app</code> directory.</p>
+
+<h2 id="54-commit-and-push-your-changes">5.4 Commit and push your changes:</h2>
+
+<p>Navigate to the <code class="language-plaintext highlighter-rouge">news-aggregator-app</code> directory, stage the changes, commit them, and push to the GitHub repository:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>news-aggregator-app
+git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"Add Flask application code"</span>
+git push origin main
+</code></pre></div></div>
+
+<h2 id="56-create-a-github-actions-workflow-file">5.6 Create a GitHub Actions workflow file:</h2>
+
+<p>In the root directory of your repository, create a new directory <code class="language-plaintext highlighter-rouge">.github/workflows/</code> and a file named <code class="language-plaintext highlighter-rouge">ci-cd.yml</code> inside the workflows directory with the following content:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">CI/CD Pipeline</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">main</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build_and_push</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Check out repository</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Log in to Amazon ECR</span>
+      <span class="na">id</span><span class="pi">:</span> <span class="s">login-ecr</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">aws-actions/amazon-ecr-login@v1</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build and push Docker image</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/build-push-action@v2</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">context</span><span class="pi">:</span> <span class="s">.</span>
+        <span class="na">push</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">tags</span><span class="pi">:</span> <span class="s">$/$:$</span>
+
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="s">build_and_push</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Check out repository</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install and configure AWS CLI</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">aws-actions/configure-aws-credentials@v1</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">aws-access-key-id</span><span class="pi">:</span> <span class="s">$</span>
+        <span class="na">aws-secret-access-key</span><span class="pi">:</span> <span class="s">$</span>
+        <span class="na">aws-region</span><span class="pi">:</span> <span class="s">$</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install and configure kubectl</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">VERSION=$(curl --silent https://storage.googleapis.com/kubernetes-release/release/stable.txt)</span>
+        <span class="s">curl https://storage.googleapis.com/kubernetes-release/release/$VERSION/bin/linux/amd64/kubectl \</span>
+          <span class="s">--progress-bar \</span>
+          <span class="s">--location \</span>
+          <span class="s">--remote-name</span>
+        <span class="s">chmod +x kubectl</span>
+        <span class="s">sudo mv kubectl /usr/local/bin/</span>
+        <span class="s">echo $ | base64 --decode &gt; kubeconfig.yaml</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to Amazon EKS</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">kubectl kustomize k8s/ | kubectl apply -f - --kubeconfig kubeconfig.yaml</span>
+</code></pre></div></div>
+
+<p>This workflow file defines the steps for building and pushing the Docker image to Amazon ECR and deploying the application to your Amazon EKS cluster using kubectl.</p>
+
+<h2 id="57-configure-secrets">5.7 Configure secrets:</h2>
+
+<p>In your GitHub repository, go to “Settings” &gt; “Secrets” &gt; “Actions” and add the following secrets:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">AWS_ACCESS_KEY_ID</code>: Your AWS access key ID.</li>
+  <li><code class="language-plaintext highlighter-rouge">AWS_SECRET_ACCESS_KEY</code>: Your AWS secret access key.</li>
+  <li><code class="language-plaintext highlighter-rouge">AWS_REGION</code>: Your AWS region (e.g., ‘us-east-1’).</li>
+  <li><code class="language-plaintext highlighter-rouge">ECR_REPOSITORY</code>: Your Amazon ECR repository name.</li>
+  <li><code class="language-plaintext highlighter-rouge">KUBECONFIG</code>: Your Kubernetes kubeconfig file content, base64-encoded.</li>
+</ul>
+
+<p><img src="/assets/images/secrets-page.png" alt="Secrets page" /></p>
+
+<p>To encode your kubeconfig file, run the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat </span>kubeconfig.yaml | <span class="nb">base64</span>
+</code></pre></div></div>
+
+<h3 id="now-you-have-a-cicd-pipeline-set-up-using-github-actions-whenever-you-push-a-new-commit-to-your-main-branch-the-pipeline-will-automatically-build-the-docker-image-push-it-to-ecr-and-deploy-the-updated-application-to-your-amazon-eks-cluster">Now you have a CI/CD pipeline set up using GitHub Actions. Whenever you push a new commit to your main branch, the pipeline will automatically build the Docker image, push it to ECR, and deploy the updated application to your Amazon EKS cluster.</h3>
+
+  </div>
+</body>
+
+</html>
