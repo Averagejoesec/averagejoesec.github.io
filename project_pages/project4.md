@@ -103,13 +103,15 @@ This workflow file defines the steps for building and pushing the Docker image t
 
 In your GitHub repository, go to "Settings" > "Secrets" > "Actions" and add the following secrets:
 
+![Secrets page](/assets/images/secrets-page.png)
+
 - `AWS_ACCESS_KEY_ID`: Your AWS access key ID.
 - `AWS_SECRET_ACCESS_KEY`: Your AWS secret access key.
 - `AWS_REGION`: Your AWS region (e.g., 'us-east-1').
 - `ECR_REPOSITORY`: Your Amazon ECR repository name.
 - `KUBECONFIG`: Your Kubernetes kubeconfig file content, base64-encoded.
 
-![Secrets page](/assets/images/secrets-page.png)
+
 
 To encode your kubeconfig file, run the following command:
 
