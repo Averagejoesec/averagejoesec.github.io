@@ -36,11 +36,11 @@
     <h1>Project 4</h1>
     <h1 id="implement-cicd-using-github-actions">Implement CI/CD using GitHub Actions</h1>
 
-<h2 id="51-create-a-github-repository">5.1. Create a GitHub repository:</h2>
+<h2 id="41-create-a-github-repository">4.1. Create a GitHub repository:</h2>
 
 <p>Create a GitHub repository and push your Flask application code (including the Dockerfile, requirements.txt, Kubernetes manifests, and any other necessary files) to the repository.</p>
 
-<h2 id="52-clone-the-github-repository">5.2 Clone the GitHub repository:</h2>
+<h2 id="42-clone-the-github-repository">4.2 Clone the GitHub repository:</h2>
 
 <p>Navigate to the directory where you want to store the project and clone the GitHub repository:</p>
 
@@ -48,11 +48,11 @@
 git clone https://github.com/averagejoesec/news-aggregator-app.git
 </code></pre></div></div>
 
-<h2 id="53-add-flask-application-code">5.3 Add Flask application code:</h2>
+<h2 id="43-add-flask-application-code">4.3 Add Flask application code:</h2>
 
 <p>Copy your Flask application code (including the Dockerfile, requirements.txt, Kubernetes manifests, and any other necessary files) into the <code class="language-plaintext highlighter-rouge">news-aggregator-app</code> directory.</p>
 
-<h2 id="54-commit-and-push-your-changes">5.4 Commit and push your changes:</h2>
+<h2 id="44-commit-and-push-your-changes">4.4 Commit and push your changes:</h2>
 
 <p>Navigate to the <code class="language-plaintext highlighter-rouge">news-aggregator-app</code> directory, stage the changes, commit them, and push to the GitHub repository:</p>
 
@@ -62,7 +62,7 @@ git commit <span class="nt">-m</span> <span class="s2">"Add Flask application co
 git push origin main
 </code></pre></div></div>
 
-<h2 id="56-create-a-github-actions-workflow-file">5.6 Create a GitHub Actions workflow file:</h2>
+<h2 id="45-create-a-github-actions-workflow-file">4.5 Create a GitHub Actions workflow file:</h2>
 
 <p>In the root directory of your repository, create a new directory <code class="language-plaintext highlighter-rouge">.github/workflows/</code> and a file named <code class="language-plaintext highlighter-rouge">ci-cd.yml</code> inside the workflows directory with the following content:</p>
 
@@ -125,7 +125,7 @@ git push origin main
 
 <p>This workflow file defines the steps for building and pushing the Docker image to Amazon ECR and deploying the application to your Amazon EKS cluster using kubectl.</p>
 
-<h2 id="57-configure-secrets">5.7 Configure secrets:</h2>
+<h2 id="47-configure-secrets">4.7 Configure secrets:</h2>
 
 <p>In your GitHub repository, go to “Settings” &gt; “Secrets” &gt; “Actions” and add the following secrets:</p>
 

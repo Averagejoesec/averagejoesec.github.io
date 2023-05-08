@@ -99,7 +99,7 @@ jobs:
 
 This workflow file defines the steps for building and pushing the Docker image to Amazon ECR and deploying the application to your Amazon EKS cluster using kubectl.
 
-## 4.7 Configure secrets:
+## 4.6 Configure secrets:
 
 In your GitHub repository, go to "Settings" > "Secrets" > "Actions" and add the following secrets:
 
