@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 2
+title: Setup AWS IAM/VPC
 ---
 
 # Set up AWS and upload your Docker image

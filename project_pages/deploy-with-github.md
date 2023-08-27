@@ -1,15 +1,15 @@
 ---
 layout: project 
-title: Project 4
+title: Deploy with GitHub
 ---
 
 # Implement CI/CD using GitHub Actions
 
-## 4.1. Create a GitHub repository:
+## 1.1 Create a GitHub repository:
 
 Create a GitHub repository and push your Flask application code (including the Dockerfile, requirements.txt, Kubernetes manifests, and any other necessary files) to the repository.
 
-## 4.2 Clone the GitHub repository:
+## 1.2 Clone the GitHub repository:
 
 Navigate to the directory where you want to store the project and clone the GitHub repository:
 
@@ -18,11 +18,11 @@ cd /path/to/your/directory
 git clone https://github.com/averagejoesec/news-aggregator-app.git
 ```
 
-## 4.3 Add Flask application code:
+## 1.3 Add Flask application code:
 
 Copy your Flask application code (including the Dockerfile, requirements.txt, Kubernetes manifests, and any other necessary files) into the `news-aggregator-app` directory.
 
-## 4.4 Commit and push your changes:
+## 1.4 Commit and push your changes:
 
 Navigate to the `news-aggregator-app` directory, stage the changes, commit them, and push to the GitHub repository:
 
@@ -33,9 +33,7 @@ git commit -m "Add Flask application code"
 git push origin main
 ```
 
-
-
-## 4.5 Create a GitHub Actions workflow file:
+## 1.5 Create a GitHub Actions workflow file:
 
 In the root directory of your repository, create a new directory `.github/workflows/` and a file named `ci-cd.yml` inside the workflows directory with the following content:
 
@@ -99,7 +97,7 @@ jobs:
 
 This workflow file defines the steps for building and pushing the Docker image to Amazon ECR and deploying the application to your Amazon EKS cluster using kubectl.
 
-## 4.6 Configure secrets:
+## 1.6 Configure secrets:
 
 In your GitHub repository, go to "Settings" > "Secrets" > "Actions" and add the following secrets:
 

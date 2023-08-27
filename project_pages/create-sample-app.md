@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 1
+title: Create sample application
 ---
 
 # Flask News Aggregator with Docker
