@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   align-items: center;  /* This will center the direct children horizontally */
   height: 100vh;        /* Taking the full viewport height */
-  justify-content: flex-start;  /* This will start the content from the top */
+  justify-content: center;  /* This will start the content from the top */
 }
 
 /* Center the content */
