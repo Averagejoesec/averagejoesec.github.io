@@ -35,17 +35,20 @@ body {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
-  align-items: center;  /* This will center the direct children horizontally */
-  height: 100vh;        /* Taking the full viewport height */
-  justify-content: center;  /* This will start the content from the top */
+  align-items: center;  
+  min-height: 100vh;        
+  justify-content: flex-start;
 }
 
 /* Center the content */
 .container {
-  border: 1px solid #333;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  max-width: 1500px;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: 50px;
 }
+
 
 /* Headings */
 h1 {
@@ -130,8 +133,9 @@ body, html {
 
 .outer-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
   width: 100%;
 }
@@ -143,17 +147,46 @@ body, html {
     text-align: center;
 }
 
-footer {
-  text-align: center;
-  padding: 20px 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: #1e1e1e;  /* A shade matching the enhanced background color, but you can adjust as needed */
-  color: #f1f1f1;
+.code-container {
+  position: relative;
 }
 
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  color: #f1f1f1;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
 
+.copy-button:hover {
+  opacity: 1;
+}
+
+.projects-section {
+  text-align: center;  /* Center the text and inline elements */
+  display: flex;       /* Use Flexbox for layout */
+  flex-direction: column;  /* Stack children vertically */
+  align-items: center; /* Center block-level children horizontally */
+}
+
+.projects-section ul {
+  list-style-type: none;  /* Remove bullet points */
+  padding: 0;  /* Remove padding */
+  display: flex;  /* Use Flexbox for layout */
+  justify-content: center;  /* Center list items horizontally */
+  flex-wrap: wrap;  /* Allow list items to wrap to next line if necessary */
+}
+
+.projects-section li {
+  margin: 15px;  /* Add some spacing between list items */
+}
 
 
 

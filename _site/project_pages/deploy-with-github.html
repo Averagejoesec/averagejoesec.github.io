@@ -7,10 +7,22 @@
   <title>Deploy with GitHub</title>
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
-   <style>
+  <style>
+    /* General styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
     /* Project-specific styles */
     .project-container {
       text-align: left;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;  /* Centers the container */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      background-color: #f7f7f7;  /* Light background for contrast */
     }
 
     pre {
@@ -19,6 +31,7 @@
       padding: 1rem;
       border-radius: 4px;
       overflow-x: auto;
+      margin: 1rem 0;
     }
 
     code {
@@ -27,6 +40,12 @@
       color: #f1f1f1;
       padding: 2px 4px;
       border-radius: 4px;
+    }
+
+    h1 {
+      border-bottom: 2px solid #333;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -147,6 +166,8 @@ git push origin main
 <h3 id="now-you-have-a-cicd-pipeline-set-up-using-github-actions-whenever-you-push-a-new-commit-to-your-main-branch-the-pipeline-will-automatically-build-the-docker-image-push-it-to-ecr-and-deploy-the-updated-application-to-your-amazon-eks-cluster">Now you have a CI/CD pipeline set up using GitHub Actions. Whenever you push a new commit to your main branch, the pipeline will automatically build the Docker image, push it to ECR, and deploy the updated application to your Amazon EKS cluster.</h3>
 
   </div>
+  <script src="/assets/js/copyCode.js"></script>
 </body>
 
 </html>
+
