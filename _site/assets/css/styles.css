@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #222;
+  background-color: #1e1e1e;
   color: #f1f1f1;
   margin: 0;
   padding: 0;
@@ -12,15 +12,21 @@ body {
 
 /* Center the content */
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Headings */
-h1, h2 {
+h1 {
+  font-size: 2.2em;
   font-weight: bold;
-  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 1.8em;
+  font-style: italic;
 }
 
 /* Links */
@@ -51,7 +57,7 @@ li {
   padding: 1rem;
   border: 1px solid #333;
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -78,6 +84,42 @@ ul li a:hover img {
 
 ul li a:hover p {
   text-decoration: underline;
+}
+
+/* Hover Effects */
+li:hover {
+  background-color: rgba(255, 255, 255, 0.05);  /* Slight background color on hover */
+  transform: translateY(-5px);  /* Slight upward shift on hover */
+  transition: all 0.3s ease;
+}
+
+/* Spacing */
+li img {
+  margin-bottom: 1.2rem;
+}
+
+li p {
+  margin-bottom: 0.7rem;
+}
+
+body, html {
+  height: 90%;  /* Ensuring the body and html take up the full viewport height */
+  margin: 0;
+}
+
+.outer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container h1, 
+.container h2, 
+.container h3,
+.container p {
+    text-align: center;
 }
 
 
