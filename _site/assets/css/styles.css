@@ -99,6 +99,7 @@ li img {
   max-width: 50%;
   height: auto;
   margin-bottom: 1.2rem;
+  border-radius: 8px;  /* Adjust the value as needed to achieve the desired rounding */
 }
 
 /* Adjust the font size for project and script titles inside list items */
