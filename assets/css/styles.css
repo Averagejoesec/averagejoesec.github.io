@@ -46,7 +46,7 @@ body {
   width: 90%;
   box-sizing: border-box;
   padding: 20px;
-  margin-top: 50px;
+  margin-top: -20px;
 }
 
 
@@ -152,22 +152,30 @@ body, html {
 }
 
 .copy-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #333;
-  color: #f1f1f1;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  opacity: 0.7;
-  transition: opacity 0.3s;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(45deg, #3498db, #55a8fd);  /* Gradient background */
+    color: #fff;  /* White text */
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;  /* Bold text */
+    transition: all 0.3s;  /* Smooth transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  /* Slight shadow for depth */
+    font-size: 0.85em;  /* Adjusted font size */
 }
 
 .copy-button:hover {
-  opacity: 1;
+    background: linear-gradient(45deg, #238cd1, #449bf8);  /* Slightly darker gradient on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Increased shadow depth on hover */
 }
+
+.copy-button:active {
+    transform: scale(0.95);  /* Slight scale down when button is pressed */
+}
+
 
 .projects-section {
   text-align: center;  /* Center the text and inline elements */
